@@ -6,6 +6,8 @@
 <title>Chronic Worm Genetics</title>
 
 <style>
+  html { scroll-behavior: smooth; }
+
   body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -18,7 +20,7 @@
     color: #39ff14;
     font-size: 2.5rem;
     text-shadow: 0 0 15px #39ff14;
-    margin-top: 20px;
+    margin: 20px 10px 5px;
   }
 
   h2 {
@@ -29,7 +31,25 @@
 
   .sub {
     color: #ccc;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
+  }
+
+  .nav {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .button, .pay a {
+    display: inline-block;
+    margin: 6px;
+    padding: 12px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: white;
+    background: #111;
+    border: 1px solid #39ff14;
+    box-shadow: 0 0 10px #39ff14;
+    font-weight: bold;
   }
 
   .grid {
@@ -43,22 +63,27 @@
     border: 1px solid #39ff14;
     border-radius: 15px;
     padding: 15px;
+    background: #050505;
     box-shadow: 0 0 10px #39ff14;
   }
 
   .code {
-    font-size: 0.8rem;
-    color: #aaa;
+    font-size: 0.85rem;
+    color: #39ff14;
+    font-weight: bold;
+    letter-spacing: .08em;
   }
 
   .name {
     font-size: 1.1rem;
-    margin: 5px 0;
+    margin: 6px 0;
+    font-weight: bold;
   }
 
   .meta {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: #ccc;
+    line-height: 1.4;
   }
 
   .section {
@@ -66,22 +91,27 @@
     padding: 0 15px;
   }
 
-  .pay a {
-    display: block;
-    margin: 10px auto;
-    padding: 12px;
-    max-width: 250px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-    background: #111;
+  .deal {
+    max-width: 520px;
+    margin: 0 auto;
     border: 1px solid #39ff14;
+    border-radius: 15px;
+    padding: 18px;
+    background: #050505;
     box-shadow: 0 0 10px #39ff14;
   }
 
   .note {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #aaa;
+  }
+
+  footer {
+    margin-top: 45px;
+    padding: 25px 15px;
+    color: #88ff88;
+    font-size: .85rem;
+    border-top: 1px solid #222;
   }
 </style>
 </head>
@@ -91,61 +121,129 @@
 <h1>Chronic Worm Genetics</h1>
 <div class="sub">Small Batch • Independent Breeder • Limited Drops</div>
 
-<!-- SEEDS -->
-<section>
+<div class="nav">
+  <a class="button" href="#seeds">Seeds</a>
+  <a class="button" href="#pricing">Pricing</a>
+  <a class="button" href="#coming">Coming Soon</a>
+  <a class="button" href="#order">Order</a>
+  <a class="button" href="#pay">Pay</a>
+</div>
+
+<section id="seeds">
   <h2>Available Seeds</h2>
-  <p class="note">Photo Reg • Limited packs available</p>
+  <p class="note">Photo Reg • 10-Pack • Limited packs available</p>
 
   <div class="grid">
 
-    <div class="card"><div class="code">R1</div><div class="name">Cherry Bomb</div><div class="meta">Sativa Leaning • Fruity • Balanced</div></div>
+    <div class="card">
+      <div class="code">CW-01</div>
+      <div class="name">Cherry Bomb</div>
+      <div class="meta">10-Pack • Photo Reg<br>Sativa Leaning • Fruity • Balanced</div>
+    </div>
 
-    <div class="card"><div class="code">R2</div><div class="name">Blueberry Kush</div><div class="meta">Indica Dominant • Sweet Berry • Heavy Relaxation</div></div>
+    <div class="card">
+      <div class="code">CW-02</div>
+      <div class="name">Blueberry Kush</div>
+      <div class="meta">10-Pack • Photo Reg<br>Indica Dominant • Sweet Berry • Heavy Relaxation</div>
+    </div>
 
-    <div class="card"><div class="code">R3</div><div class="name">LSD</div><div class="meta">Hybrid • Creative • Uplifting</div></div>
+    <div class="card">
+      <div class="code">CW-03</div>
+      <div class="name">LSD</div>
+      <div class="meta">10-Pack • Photo Reg<br>Hybrid • Creative • Uplifting</div>
+    </div>
 
-    <div class="card"><div class="code">R4</div><div class="name">Death Bubba</div><div class="meta">Indica Dominant • Heavy • High THC Potential</div></div>
+    <div class="card">
+      <div class="code">CW-04</div>
+      <div class="name">Death Bubba</div>
+      <div class="meta">10-Pack • Photo Reg<br>Indica Dominant • Heavy • High THC Potential</div>
+    </div>
 
-    <div class="card"><div class="code">R5</div><div class="name">Purple Rock Candy</div><div class="meta">Indica • Sweet • Relaxing</div></div>
+    <div class="card">
+      <div class="code">CW-05</div>
+      <div class="name">Purple Rock Candy</div>
+      <div class="meta">10-Pack • Photo Reg<br>Indica • Sweet • Relaxing</div>
+    </div>
 
-    <div class="card"><div class="code">R6</div><div class="name">Spiked Punch</div><div class="meta">Hybrid • Balanced • Strong</div></div>
+    <div class="card">
+      <div class="code">CW-06</div>
+      <div class="name">Spiked Punch</div>
+      <div class="meta">10-Pack • Photo Reg<br>Hybrid • Balanced • Strong</div>
+    </div>
 
-    <div class="card"><div class="code">R7</div><div class="name">Red Dragon</div><div class="meta">Sativa Hybrid • Energetic • Uplifting</div></div>
+    <div class="card">
+      <div class="code">CW-07</div>
+      <div class="name">Red Dragon</div>
+      <div class="meta">10-Pack • Photo Reg<br>Sativa Hybrid • Energetic • Uplifting</div>
+    </div>
 
-    <div class="card"><div class="code">R8</div><div class="name">Red Dawn</div><div class="meta">Hybrid • Balanced • Smooth</div></div>
+    <div class="card">
+      <div class="code">CW-08</div>
+      <div class="name">Red Dawn</div>
+      <div class="meta">10-Pack • Photo Reg<br>Hybrid • Balanced • Smooth</div>
+    </div>
 
-    <div class="card"><div class="code">R9</div><div class="name">Purple Dawn</div><div class="meta">Indica Dominant • Relaxing • Earthy</div></div>
+    <div class="card">
+      <div class="code">CW-09</div>
+      <div class="name">Purple Dawn</div>
+      <div class="meta">10-Pack • Photo Reg<br>Indica Dominant • Relaxing • Earthy</div>
+    </div>
 
-    <div class="card"><div class="code">R10</div><div class="name">Purple Punch</div><div class="meta">Indica Leaning • Sweet • Heavy Relaxation</div></div>
+    <div class="card">
+      <div class="code">CW-10</div>
+      <div class="name">Purple Punch</div>
+      <div class="meta">10-Pack • Photo Reg<br>Indica Leaning • Sweet • Heavy Relaxation</div>
+    </div>
 
   </div>
 </section>
 
-<!-- PRICING -->
-<div class="section">
+<div class="section" id="pricing">
   <h2>Pricing</h2>
 
-  <p><strong>10 Seeds – $25</strong></p>
+  <div class="deal">
+    <p><strong>10 Seeds – $25</strong></p>
 
-  <p style="margin-top:15px; color:#39ff14;">
-    🔥 Buy 2 Packs → Get 1 FREE
-  </p>
+    <p style="color:#39ff14; font-weight:bold;">
+      Buy 2 Packs → Get 1 FREE
+    </p>
 
-  <p>Deal is stackable (4 = 2 free, 6 = 3 free, etc.)</p>
+    <p>Deal is stackable.</p>
+    <p>Buy 4 packs → Get 2 free packs.</p>
+    <p>Buy 6 packs → Get 3 free packs.</p>
 
-  <p class="note">Free packs are dealer’s choice unless requested</p>
+    <p class="note">Free packs are dealer’s choice unless requested.</p>
+  </div>
 </div>
 
-<!-- ORDER -->
-<div class="section">
+<div class="section" id="coming">
+  <h2>Coming Soon</h2>
+
+  <div class="deal">
+    <p><strong>Chronic Worm Genetics Drops</strong></p>
+    <p>HG#39 (Torture Cut) S1</p>
+    <p>HG#39 × Beaver Cookies</p>
+
+    <p style="margin-top:18px;"><strong>Future Inventory</strong></p>
+    <p>Fem Photos • Auto Fems • New Reg Photo Drops</p>
+
+    <p style="margin-top:18px;"><strong>Side Project</strong></p>
+    <p>Chronic Worm Radio</p>
+  </div>
+</div>
+
+<div class="section" id="order">
   <h2>How To Order</h2>
-  <p>Choose your strain code (R1–R10)</p>
-  <p>Send payment</p>
-  <p>Email your order + shipping info</p>
+
+  <div class="deal">
+    <p>1. Choose your CW strain code.</p>
+    <p>2. Send payment using one of the options below.</p>
+    <p>3. Email your order and shipping info to:</p>
+    <p><strong>cwormg@gmail.com</strong></p>
+  </div>
 </div>
 
-<!-- PAYMENT -->
-<div class="section pay">
+<div class="section pay" id="pay">
   <h2>Payment</h2>
 
   <a href="https://cash.app/$DaveVandergriff">Cash App</a>
@@ -154,17 +252,17 @@
     Venmo
   </a>
 
-  <a href="mailto:cwormg@gmail.com">
-    PayPal / Email
-  </a>
-
+  <div class="deal" style="margin-top:15px;">
+    <p><strong>PayPal</strong></p>
+    <p>Send payment to:</p>
+    <p><strong>cwormg@gmail.com</strong></p>
+  </div>
 </div>
 
-<!-- CONTACT -->
-<div class="section">
-  <h2>Contact</h2>
-  <p>cwormg@gmail.com</p>
-</div>
+<footer>
+  Chronic Worm Genetics<br>
+  Collector / novelty seed menu
+</footer>
 
 </body>
 </html>

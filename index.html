@@ -4,102 +4,231 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chronic Worm Genetics</title>
-
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #e5e5e5;
+      background: radial-gradient(circle at top, #102010 0%, #050505 45%, #000 100%);
+      color: #e9ffe9;
       text-align: center;
     }
 
-    h1, h2 {
+    header {
+      padding: 55px 18px 35px;
+      border-bottom: 1px solid #153815;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.4rem;
       color: #39ff14;
-      text-shadow: 0 0 10px #39ff14;
+      text-shadow: 0 0 18px #39ff14;
+      line-height: 1.05;
+    }
+
+    h2 {
+      color: #39ff14;
+      text-shadow: 0 0 12px #39ff14;
+      margin-bottom: 18px;
+    }
+
+    p {
+      line-height: 1.5;
+      color: #d8ffd8;
     }
 
     section {
-      padding: 30px 15px;
-      border-bottom: 1px solid #222;
+      padding: 34px 16px;
+      border-bottom: 1px solid #132413;
     }
 
-    .card {
-      border: 1px solid #39ff14;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 10px;
-      box-shadow: 0 0 10px #39ff14;
+    .tagline {
+      font-size: 1.05rem;
+      margin-top: 14px;
+      color: #d7ffd7;
+    }
+
+    .nav {
+      margin-top: 25px;
     }
 
     .button {
       display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
+      margin: 8px 5px;
+      padding: 12px 17px;
       border: 1px solid #39ff14;
       color: #39ff14;
       text-decoration: none;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #39ff14;
+      border-radius: 999px;
+      box-shadow: 0 0 12px rgba(57,255,20,.65);
+      font-weight: bold;
+      background: rgba(57,255,20,.06);
+    }
+
+    .button:hover {
+      background: rgba(57,255,20,.16);
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .card {
+      border: 1px solid #39ff14;
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(10, 18, 10, .92);
+      box-shadow: 0 0 14px rgba(57,255,20,.55);
+    }
+
+    .code {
+      color: #39ff14;
+      font-size: .9rem;
+      letter-spacing: .08em;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      color: #d4ffd4;
+      font-size: .98rem;
+    }
+
+    .steps {
+      max-width: 520px;
+      margin: 0 auto;
+      text-align: left;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .note {
+      font-size: .9rem;
+      color: #aefcae;
+      max-width: 620px;
+      margin: 15px auto 0;
+    }
+
+    footer {
+      padding: 28px 16px;
+      color: #9aff9a;
+      font-size: .9rem;
     }
   </style>
 </head>
 
 <body>
 
-<section>
+<header>
   <h1>Chronic Worm Genetics</h1>
-  <p>Small Batch • Independent Breeder</p>
-</section>
+  <p class="tagline">Small Batch Genetics • Event Drops • Pheno Packs</p>
 
-<section>
+  <div class="nav">
+    <a class="button" href="#seeds">View Seeds</a>
+    <a class="button" href="#order">How To Order</a>
+    <a class="button" href="#pay">Pay</a>
+  </div>
+</header>
+
+<section id="featured">
   <h2>Featured Drops</h2>
 
-  <div class="card">
-    <strong>HG#39 (Torture Cut) S1</strong><br>
-    Indica Leaning • 8–9 weeks<br>
-    Heavy, relaxing
+  <div class="grid">
+    <div class="card">
+      <div class="code">FEATURED</div>
+      <div class="name">HG#39 (Torture Cut) S1</div>
+      <div class="meta">Indica Leaning • 8–9 weeks • Heavy / relaxing</div>
+    </div>
+
+    <div class="card">
+      <div class="code">FEATURED</div>
+      <div class="name">HG#39 × Beaver Cookies</div>
+      <div class="meta">Hybrid • 8–10 weeks • Balanced / strong</div>
+    </div>
   </div>
 
-  <div class="card">
-    <strong>HG#39 × Beaver Cookies</strong><br>
-    Hybrid • 8–10 weeks<br>
-    Balanced, strong
-  </div>
+  <p class="note">More Chronic Worm Genetics drops coming soon.</p>
 </section>
 
-<section>
+<section id="seeds">
   <h2>Available Seeds</h2>
 
-  <div class="card">R43 – Purple Dawn<br>Indica • Relaxing</div>
-  <div class="card">R44 – Red Dragon<br>Sativa • Uplifting</div>
-  <div class="card">R45 – LSD<br>Hybrid • Balanced</div>
-  <div class="card">R46 – Cherry Bomb<br>Hybrid • Fruity</div>
-  <div class="card">R47 – Spiked Punch<br>Indica • Relaxing</div>
+  <div class="grid">
+    <div class="card">
+      <div class="code">R43</div>
+      <div class="name">Purple Dawn</div>
+      <div class="meta">Indica Dominant • Relaxing • Photo Reg</div>
+    </div>
 
+    <div class="card">
+      <div class="code">R44</div>
+      <div class="name">Red Dragon</div>
+      <div class="meta">Sativa Hybrid • Uplifting • Photo Reg</div>
+    </div>
+
+    <div class="card">
+      <div class="code">R45</div>
+      <div class="name">LSD</div>
+      <div class="meta">Hybrid Sativa Dominant • Balanced • Photo Reg</div>
+    </div>
+
+    <div class="card">
+      <div class="code">R46</div>
+      <div class="name">Cherry Bomb</div>
+      <div class="meta">Hybrid • Fruity • Photo Reg</div>
+    </div>
+
+    <div class="card">
+      <div class="code">R47</div>
+      <div class="name">Spiked Punch</div>
+      <div class="meta">Indica Hybrid • Relaxing • Photo Reg</div>
+    </div>
+  </div>
 </section>
 
-<section>
+<section id="order">
   <h2>How To Order</h2>
-  <p>
-    1. Pick your strain number<br>
-    2. Send payment<br>
-    3. Include strain + shipping info<br>
-    4. Tracking sent within 48hrs
-  </p>
+
+  <div class="steps">
+    1. Pick your strain number, like R43 or R47.<br>
+    2. Send payment using Cash App, PayPal, or Venmo.<br>
+    3. Include strain number and shipping info in the note.<br>
+    4. Tracking will be sent by email.
+  </div>
+
+  <p class="note">For questions or custom orders, email cwormg@gmail.com.</p>
 </section>
 
-<section>
+<section id="pay">
   <h2>Payment Options</h2>
-  <a class="button" href="#">PayPal</a>
-  <a class="button" href="#">Cash App</a>
-  <a class="button" href="#">Venmo</a>
+
+  <a class="button" href="https://cash.app/$DaveVandergriff">Cash App</a>
+  <a class="button" href="mailto:cwormg@gmail.com?subject=Chronic%20Worm%20Genetics%20Order">PayPal / Email</a>
+  <a class="button" href="https://venmo.com/code?user_id=3583462250382881409&created=1777757498">Venmo</a>
+
+  <p class="note">PayPal email: cwormg@gmail.com</p>
 </section>
 
 <section>
   <h2>Coming Soon</h2>
-  <p>Fem Photos • Auto Fem • New Drops</p>
+  <p>Fem Photos • Auto Fems • New Reg Photo Drops • Chronic Worm Radio</p>
 </section>
+
+<footer>
+  Chronic Worm Genetics<br>
+  Novelty / collector seed menu
+</footer>
 
 </body>
 </html>

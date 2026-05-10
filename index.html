@@ -29,15 +29,9 @@
     margin-top: 40px;
   }
 
-  .sub {
-    color: #ccc;
-    margin-bottom: 18px;
-  }
+  .sub { color: #ccc; margin-bottom: 18px; }
 
-  .nav {
-    padding: 10px;
-    margin-bottom: 20px;
-  }
+  .nav { padding: 10px; margin-bottom: 20px; }
 
   .button, .pay a {
     display: inline-block;
@@ -54,7 +48,7 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 15px;
     padding: 0 15px;
   }
@@ -65,6 +59,15 @@
     padding: 15px;
     background: #050505;
     box-shadow: 0 0 10px #39ff14;
+  }
+
+  .strain-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #39ff14;
+    box-shadow: 0 0 12px rgba(57,255,20,.45);
+    background: #111;
   }
 
   .code {
@@ -125,38 +128,16 @@
   <a class="button" href="#seeds">Seeds</a>
   <a class="button" href="#pricing">Pricing</a>
   <a class="button" href="#shipping">Shipping</a>
-  <a class="button" href="#coming">Coming Soon</a>
   <a class="button" href="#order">Order</a>
   <a class="button" href="#pay">Pay</a>
+  <a class="button" href="mailto:cwormg@gmail.com">Contact CWG</a>
 </div>
 
 <section id="seeds">
   <h2>Available Seeds</h2>
   <p class="note">Photo Reg • 8-Pack • Limited packs available</p>
 
-  <div class="grid">
-
-    <div class="card"><div class="code">CW-01</div><div class="name">Cherry Bomb</div><div class="meta">8-Pack • Photo Reg<br>Sativa Leaning • Fruity • Balanced</div></div>
-
-    <div class="card"><div class="code">CW-02</div><div class="name">Blueberry Kush</div><div class="meta">8-Pack • Photo Reg<br>Indica Dominant • Sweet Berry • Relaxing</div></div>
-
-    <div class="card"><div class="code">CW-03</div><div class="name">LSD</div><div class="meta">8-Pack • Photo Reg<br>Hybrid • Creative • Uplifting</div></div>
-
-    <div class="card"><div class="code">CW-04</div><div class="name">Death Bubba</div><div class="meta">8-Pack • Photo Reg<br>Indica Dominant • Heavy • High THC</div></div>
-
-    <div class="card"><div class="code">CW-05</div><div class="name">Purple Rock Candy</div><div class="meta">8-Pack • Photo Reg<br>Indica • Sweet • Relaxing</div></div>
-
-    <div class="card"><div class="code">CW-06</div><div class="name">Spiked Punch</div><div class="meta">8-Pack • Photo Reg<br>Hybrid • Balanced • Strong</div></div>
-
-    <div class="card"><div class="code">CW-07</div><div class="name">Red Dragon</div><div class="meta">8-Pack • Photo Reg<br>Sativa Hybrid • Energetic</div></div>
-
-    <div class="card"><div class="code">CW-08</div><div class="name">Red Dawn</div><div class="meta">8-Pack • Photo Reg<br>Hybrid • Balanced</div></div>
-
-    <div class="card"><div class="code">CW-09</div><div class="name">Purple Dawn</div><div class="meta">8-Pack • Photo Reg<br>Indica Dominant • Relaxing</div></div>
-
-    <div class="card"><div class="code">CW-10</div><div class="name">Purple Punch</div><div class="meta">8-Pack • Photo Reg<br>Indica Leaning • Sweet</div></div>
-
-  </div>
+  <div class="grid" id="strainGrid"></div>
 </section>
 
 <div class="section" id="pricing">
@@ -216,6 +197,41 @@
   Chronic Worm Genetics<br>
   Collector / novelty seed menu
 </footer>
+
+<script src="data/strains.js"></script>
+<script src="data/strainImages.js"></script>
+
+<script>
+  const strainGrid = document.getElementById("strainGrid");
+
+  strainGrid.innerHTML = "";
+
+  strains.forEach(strain => {
+    const imageFile = strainImages[strain.name] || strain.image;
+
+    const card = `
+      <div class="card">
+        <img
+          class="strain-img"
+          src="public/images/${imageFile}"
+          alt="${strain.name} sticker art"
+          onerror="this.style.display='none'"
+        >
+
+        <div class="code">${strain.code}</div>
+        <div class="name">${strain.name}</div>
+
+        <div class="meta">
+          ${strain.pack} • ${strain.type}<br>
+          ${strain.description}<br>
+          THC: ${strain.thc}
+        </div>
+      </div>
+    `;
+
+    strainGrid.innerHTML += card;
+  });
+</script>
 
 </body>
 </html>

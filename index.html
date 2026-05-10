@@ -3,126 +3,153 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Chronic Worm Genetics</title>
 
 <style>
-  html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-    text-align: center;
-  }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
 
-  h1 {
-    color: #39ff14;
-    font-size: 2.5rem;
-    text-shadow: 0 0 15px #39ff14;
-    margin: 20px 10px 5px;
-  }
+h1 {
+  color: #39ff14;
+  font-size: 2.7rem;
+  text-shadow: 0 0 15px #39ff14;
+  margin: 25px 10px 5px;
+}
 
-  h2 {
-    color: #39ff14;
-    text-shadow: 0 0 10px #39ff14;
-    margin-top: 40px;
-  }
+h2 {
+  color: #39ff14;
+  text-shadow: 0 0 10px #39ff14;
+  margin-top: 40px;
+}
 
-  .sub {
-    color: #ccc;
-    margin-bottom: 18px;
-  }
+.sub {
+  color: #ccc;
+  margin-bottom: 18px;
+}
 
-  .nav {
-    padding: 10px;
-    margin-bottom: 20px;
-  }
+.nav {
+  padding: 10px;
+  margin-bottom: 20px;
+}
 
-  .button,
-  .pay a {
-    display: inline-block;
-    margin: 6px;
-    padding: 12px 16px;
-    border-radius: 999px;
-    text-decoration: none;
-    color: white;
-    background: #111;
-    border: 1px solid #39ff14;
-    box-shadow: 0 0 10px #39ff14;
-    font-weight: bold;
-  }
+.button,
+.pay a,
+.cart-btn {
+  display: inline-block;
+  margin: 6px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: white;
+  background: #111;
+  border: 1px solid #39ff14;
+  box-shadow: 0 0 10px #39ff14;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 15px;
-    padding: 0 15px;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+  padding: 0 15px;
+}
 
-  .card {
-    border: 1px solid #39ff14;
-    border-radius: 15px;
-    padding: 15px;
-    background: #050505;
-    box-shadow: 0 0 10px #39ff14;
-  }
+.card {
+  border: 1px solid #39ff14;
+  border-radius: 15px;
+  padding: 15px;
+  background: #050505;
+  box-shadow: 0 0 10px #39ff14;
+}
 
-  .strain-img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #39ff14;
-    box-shadow: 0 0 12px rgba(57,255,20,.45);
-    background: #111;
-  }
+.strain-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #39ff14;
+  box-shadow: 0 0 12px rgba(57,255,20,.45);
+  background: #111;
+}
 
-  .code {
-    font-size: 0.85rem;
-    color: #39ff14;
-    font-weight: bold;
-  }
+.code {
+  font-size: 0.85rem;
+  color: #39ff14;
+  font-weight: bold;
+}
 
-  .name {
-    font-size: 1.1rem;
-    margin: 6px 0;
-    font-weight: bold;
-  }
+.name {
+  font-size: 1.1rem;
+  margin: 6px 0;
+  font-weight: bold;
+}
 
-  .meta {
-    font-size: 0.82rem;
-    color: #ccc;
-    line-height: 1.4;
-  }
+.meta {
+  font-size: 0.82rem;
+  color: #ccc;
+  line-height: 1.45;
+}
 
-  .section {
-    margin-top: 40px;
-    padding: 0 15px;
-  }
+.section {
+  margin-top: 40px;
+  padding: 0 15px;
+}
 
-  .deal {
-    max-width: 520px;
-    margin: 0 auto;
-    border: 1px solid #39ff14;
-    border-radius: 15px;
-    padding: 18px;
-    background: #050505;
-    box-shadow: 0 0 10px #39ff14;
-  }
+.deal {
+  max-width: 520px;
+  margin: 0 auto;
+  border: 1px solid #39ff14;
+  border-radius: 15px;
+  padding: 18px;
+  background: #050505;
+  box-shadow: 0 0 10px #39ff14;
+}
 
-  .note {
-    font-size: 0.85rem;
-    color: #aaa;
-    margin-top: 10px;
-  }
+.note {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 10px;
+}
 
-  footer {
-    margin-top: 45px;
-    padding: 25px 15px;
-    color: #88ff88;
-    font-size: .85rem;
-    border-top: 1px solid #222;
-  }
+.cart {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #39ff14;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #39ff14;
+  background: #050505;
+}
+
+.cart-item {
+  margin: 10px 0;
+  color: #ccc;
+}
+
+.total {
+  color: #39ff14;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 45px;
+  padding: 25px 15px;
+  color: #88ff88;
+  font-size: .85rem;
+  border-top: 1px solid #222;
+}
 </style>
 </head>
 
@@ -138,7 +165,7 @@
   <a class="button" href="#seeds">Seeds</a>
   <a class="button" href="#pricing">Pricing</a>
   <a class="button" href="#shipping">Shipping</a>
-  <a class="button" href="#order">Order</a>
+  <a class="button" href="#cart">Cart</a>
   <a class="button" href="#pay">Pay</a>
   <a class="button" href="mailto:cwormg@gmail.com">
     Contact CWG
@@ -163,7 +190,9 @@
 
   <div class="deal">
 
-    <p><strong>8 Seeds – $25</strong></p>
+    <p>
+      <strong>8 Seeds – $25</strong>
+    </p>
 
     <p style="color:#39ff14; font-weight:bold;">
       Buy 2 Packs → Get 1 FREE
@@ -173,7 +202,7 @@
 
     <p class="note">
       Free packs are hand-picked by Chronic Worm Genetics.
-      May include site-listed or vault selections.
+      May include vault selections.
     </p>
 
   </div>
@@ -186,7 +215,9 @@
 
   <div class="deal">
 
-    <p><strong>$6 Flat Rate Shipping</strong></p>
+    <p>
+      <strong>$6 Flat Rate Shipping</strong>
+    </p>
 
     <p>Includes tracking</p>
 
@@ -198,23 +229,21 @@
 
 </div>
 
-<div class="section" id="order">
+<div class="cart" id="cart">
 
-  <h2>How To Order</h2>
+  <h2>Your Cart</h2>
 
-  <div class="deal">
+  <div id="cartItems"></div>
 
-    <p>Choose your CW strain code</p>
-
-    <p>Send payment</p>
-
-    <p>Email your order + shipping info</p>
-
+  <div class="total" id="cartTotal">
+    Total: $0
   </div>
 
-  <a class="button" href="mailto:cwormg@gmail.com">
-    Email Order
-  </a>
+  <br>
+
+  <button class="cart-btn" onclick="submitOrder()">
+    Submit Order By Email
+  </button>
 
 </div>
 
@@ -231,11 +260,8 @@
   </a>
 
   <div class="deal">
-
     <p><strong>PayPal</strong></p>
-
     <p>cwormg@gmail.com</p>
-
   </div>
 
 </div>
@@ -245,52 +271,107 @@
   Collector / novelty seed menu
 </footer>
 
-<script src="/data/strains.js"></script>
-<script src="/data/strainImages.js"></script>
+<script src="data/strains.js"></script>
+<script src="data/strainImages.js"></script>
 
 <script>
+const strainGrid = document.getElementById("strainGrid");
 
-  const strainGrid = document.getElementById("strainGrid");
+let cart = [];
 
-  strainGrid.innerHTML = "";
+function renderCart() {
 
-  strains.forEach(strain => {
+  const cartItems = document.getElementById("cartItems");
+  const cartTotal = document.getElementById("cartTotal");
 
-    const imageFile =
-      strainImages[strain.name] ||
-      strain.image;
+  cartItems.innerHTML = "";
 
-    const card = `
-      <div class="card">
+  let total = 0;
 
-        <img
-          class="strain-img"
-          src="/images/${imageFile}"
-          alt="${strain.name} sticker art"
-          onerror="this.style.display='none'"
-        >
+  cart.forEach(item => {
 
-        <div class="code">
-          ${strain.code}
-        </div>
+    total += 25;
 
-        <div class="name">
-          ${strain.name}
-        </div>
-
-        <div class="meta">
-          ${strain.pack} • ${strain.type}<br>
-          ${strain.description}<br>
-          THC: ${strain.thc}
-        </div>
-
+    cartItems.innerHTML += `
+      <div class="cart-item">
+        ${item.code} — ${item.name}
       </div>
     `;
-
-    strainGrid.innerHTML += card;
-
   });
 
+  total += cart.length > 0 ? 6 : 0;
+
+  cartTotal.innerHTML = `Total: $${total}`;
+}
+
+function addToCart(strain) {
+
+  cart.push(strain);
+
+  renderCart();
+}
+
+function submitOrder() {
+
+  if (cart.length === 0) {
+    alert("Cart is empty.");
+    return;
+  }
+
+  let body = "Chronic Worm Genetics Order:%0D%0A%0D%0A";
+
+  cart.forEach(item => {
+    body += `${item.code} - ${item.name}%0D%0A`;
+  });
+
+  body += `%0D%0AShipping Info:%0D%0A`;
+  body += `Name:%0D%0A`;
+  body += `Address:%0D%0A`;
+  body += `City/State/Zip:%0D%0A`;
+
+  window.location.href =
+    `mailto:cwormg@gmail.com?subject=CWG Order&body=${body}`;
+}
+
+strains.forEach(strain => {
+
+  const imageFile =
+    strainImages[strain.name] || strain.image;
+
+  const card = `
+    <div class="card">
+
+      <img
+        class="strain-img"
+        src="public/images/${imageFile}"
+        alt="${strain.name}"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="code">${strain.code}</div>
+
+      <div class="name">${strain.name}</div>
+
+      <div class="meta">
+        ${strain.pack} • ${strain.type}<br>
+        ${strain.description}<br>
+        THC: ${strain.thc}
+      </div>
+
+      <br>
+
+      <button
+        class="cart-btn"
+        onclick='addToCart(${JSON.stringify(strain)})'
+      >
+        Add To Cart
+      </button>
+
+    </div>
+  `;
+
+  strainGrid.innerHTML += card;
+});
 </script>
 
 </body>

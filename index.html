@@ -191,7 +191,7 @@ footer {
   <div class="deal">
 
     <p>
-      <strong>8 Seeds – $25</strong>
+      <strong>8 Seeds - $25</strong>
     </p>
 
     <p style="color:#39ff14; font-weight:bold;">
@@ -288,13 +288,16 @@ function renderCart() {
 
   let total = 0;
 
-  cart.forEach(item => {
+  cart.forEach((item, index) => {
 
     total += 25;
 
     cartItems.innerHTML += `
       <div class="cart-item">
-        ${item.code} — ${item.name}
+        ${item.code} - ${item.name}
+        <button class="cart-btn" onclick="removeFromCart(${index})">
+          Remove
+        </button>
       </div>
     `;
   });
@@ -304,9 +307,16 @@ function renderCart() {
   cartTotal.innerHTML = `Total: $${total}`;
 }
 
-function addToCart(strain) {
+function addToCart(index) {
 
-  cart.push(strain);
+  cart.push(strains[index]);
+
+  renderCart();
+}
+
+function removeFromCart(index) {
+
+  cart.splice(index, 1);
 
   renderCart();
 }
@@ -324,16 +334,17 @@ function submitOrder() {
     body += `${item.code} - ${item.name}%0D%0A`;
   });
 
-  body += `%0D%0AShipping Info:%0D%0A`;
+  body += `%0D%0ACustomer Info:%0D%0A`;
   body += `Name:%0D%0A`;
-  body += `Address:%0D%0A`;
-  body += `City/State/Zip:%0D%0A`;
+  body += `Shipping Address:%0D%0A`;
+  body += `Payment Method:%0D%0A`;
+  body += `Notes:%0D%0A`;
 
   window.location.href =
-    `mailto:cwormg@gmail.com?subject=CWG Order&body=${body}`;
+    `mailto:cwormg@gmail.com?subject=CWG Seed Order&body=${body}`;
 }
 
-strains.forEach(strain => {
+strains.forEach((strain, index) => {
 
   const imageFile =
     strainImages[strain.name] || strain.image;
@@ -362,7 +373,7 @@ strains.forEach(strain => {
 
       <button
         class="cart-btn"
-        onclick='addToCart(${JSON.stringify(strain)})'
+        onclick="addToCart(${index})"
       >
         Add To Cart
       </button>

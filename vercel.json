@@ -1,8 +1,35 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/:path*",
-      "destination": "/index.html"
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "data/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/data/(.*)",
+      "dest": "/data/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/public/images/$1"
+    },
+    {
+      "src": "/public/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }

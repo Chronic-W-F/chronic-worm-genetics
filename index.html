@@ -73,6 +73,15 @@ h2 {
   box-shadow: 0 0 10px #39ff14;
 }
 
+.strain-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #39ff14;
+  box-shadow: 0 0 12px rgba(57,255,20,.45);
+  background: #111;
+}
+
 .code {
   font-size: 0.85rem;
   color: #39ff14;
@@ -263,6 +272,7 @@ footer {
 </footer>
 
 <script src="data/strains.js"></script>
+<script src="data/strainImages.js"></script>
 
 <script>
 const strainGrid = document.getElementById("strainGrid");
@@ -346,8 +356,26 @@ if (typeof strains === "undefined") {
 
   strains.forEach((strain, index) => {
 
+    const imageFile =
+      typeof strainImages !== "undefined" && strainImages[strain.name]
+        ? strainImages[strain.name]
+        : strain.image;
+
+    const imageBlock = imageFile
+      ? `
+        <img
+          class="strain-img"
+          src="public/images/${imageFile}"
+          alt="${strain.name} sticker art"
+          onerror="this.style.display='none'"
+        >
+      `
+      : "";
+
     const card = `
       <div class="card">
+
+        ${imageBlock}
 
         <div class="code">${strain.code}</div>
 

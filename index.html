@@ -62,7 +62,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 15px;
-  padding: 0 15px;
+  padding: 0 15px 30px;
 }
 
 .card {
@@ -271,8 +271,8 @@ footer {
   Collector / novelty seed menu
 </footer>
 
-<script src="data/strains.js"></script>
-<script src="data/strainImages.js"></script>
+<script src="/data/strains.js"></script>
+<script src="/data/strainImages.js"></script>
 
 <script>
 const strainGrid = document.getElementById("strainGrid");
@@ -365,8 +365,8 @@ if (typeof strains === "undefined") {
       ? `
         <img
           class="strain-img"
-          src="images/${imageFile}"
-          alt="${strain.name} sticker art"
+          src="/images/${imageFile}"
+          alt="${strain.name}"
           onerror="this.style.display='none'"
         >
       `

@@ -55,9 +55,40 @@ h2 {
   color: #ccc;
   margin-bottom: 18px;
 }
-  .hero-banner {
-  max-width: 1000px;
-  margin: 20px auto 10px auto;
+  .@keyframes neonFlicker {
+  0%, 100% {
+    box-shadow:
+      0 0 8px #39ff14,
+      0 0 18px #39ff14,
+      0 0 32px #39ff14;
+    opacity: 1;
+  }
+
+  6% {
+    box-shadow: 0 0 4px #39ff14;
+    opacity: 0.85;
+  }
+
+  8% {
+    box-shadow:
+      0 0 10px #39ff14,
+      0 0 22px #39ff14,
+      0 0 38px #39ff14;
+    opacity: 1;
+  }
+
+  11% {
+    box-shadow: 0 0 2px #39ff14;
+    opacity: 0.75;
+  }
+
+  13% {
+    box-shadow:
+      0 0 9px #39ff14,
+      0 0 20px #39ff14,
+      0 0 36px #39ff14;
+    opacity: 1;
+  }
 }
 
 .hero-banner img {
